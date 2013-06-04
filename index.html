@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<title>Studio Slideshow 06-2013</title>
+
+<link rel="stylesheet" href="stylesheets/style.css">
+
+<!-- <script src="javascripts/vendor/modernizr-latest.js"></script> -->
+<script src="javascripts/vendor/modernizr-basic.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script> -->
+
+</head>
+
+
+<body>
+
+  <div class="wrapper">
+
+    <div id="slideshow-wrapper">
+
+      <div>
+        <a href="/">
+          <p>This image can have content and be a link too.</p>
+        <img src="images/beercan-image-a.jpg" alt="image 00"/>
+        </a>
+      </div>
+
+      <div>
+        <img src="images/beercan-image-b.jpg" alt="image 01"/>
+      </div>
+
+      <div>
+        <img src="images/beercan-image-c.jpg" alt="image 02"/>
+      </div>
+
+      <div>
+        <img src="images/beercan-image-d.jpg" alt="image 03"/>
+      </div>
+
+    </div> <!-- end #slideshow-wrapper -->
+
+    <div id="toggleSlideshow" onclick="STUDIO.makeSlideshow.pauseSlideshow()"> &#9787; Play / Pause &#9785;</div>
+    <div id="nextSlide" onclick="STUDIO.makeSlideshow.nextSlide()">blah ✎ </div>
+    <div id="prevSlide" onclick="STUDIO.makeSlideshow.prevSlide()"></div>
+
+  </div>
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script> -->
+<!-- <script>window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.10.0.min.js"><\/script>')</script> -->
+<script src="javascripts/studio.slideshow.js"></script>
+
+<!-- I think jQuery ready (dom ready) or load (ordered loading) is probably what you would use here instead? -->
+<script>
+
+  // addLoadEvent, I think, handles the order in which the functions are called.
+  // You could look this up in J. Keith's DOM Scripting book, which is where you found it.
+
+  // In a single addLoadEvent call:
+  // addLoadEvent( STUDIO.sampleModulePattern.myPublicMethod() );
+
+  // Chaining multiple addLoadEvent calls:
+  // addLoadEvent(function() {
+    // STUDIO.sampleModulePattern.myPublicMethod();
+    // STUDIO.makeSlideshow.initSlides("slideshow-wrapper");
+    // console.log(STUDIO.sampleModulePattern.myPublicProperty);
+  // })
+
+  // Because we're just at the bottom of the DOM, you might not need anything, just call them.
+  // But I think this could be affected by the order or not?
+  // STUDIO.sampleModulePattern.myPublicMethod();
+  STUDIO.makeSlideshow.initSlides("slideshow-wrapper");
+  // console.log(STUDIO.sampleModulePattern.myPublicProperty);
+
+</script>
+
+</body>
+</html>
+

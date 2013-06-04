@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title></title>
+
+
+
+</head>
+<body>
+
+  <button onclick="delayedAlert();">
+      show an alert box after 2 seconds
+  </button><br>
+  <button onclick="clearAlert();">Cancel</button>
+
+  <script>
+
+    function delayedAlert() {
+      timeoutID = window.setTimeout(slowAlert, 2000);
+    }
+
+    function slowAlert() {
+      alert("That was really slow!");
+    }
+
+    function clearAlert() {
+      window.clearTimeout(timeoutID);
+    }
+
+  </script>
+
+</body>
+</html>

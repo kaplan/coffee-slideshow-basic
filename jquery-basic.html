@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Demo</title>
+</head>
+<body>
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="javascripts/vendor/jquery-1.10.0.min.js"></script>
+    <script>
+
+    // Your code goes here.
+    function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+        window.onload = func;
+      } else {
+        window.onload = function() {
+          oldonload();
+          func();
+        }
+      }
+    }
+
+
+    window.onload = function() {
+
+        // alert( "welcome" );
+        console.log( "window onload called" )
+
+    }
+
+
+    $( document ).ready(function() {
+
+        // alert( "hello world, yo." );
+        console.log( "hello world, yo." );
+
+        $( "a" ).click(function( event ) {
+
+            // alert( "Thanks for visiting!" );
+            console.log( "Thanks for visiting!" );
+
+        });
+
+    });
+
+    addLoadEvent(function() {
+        document.body.style.backgroundColor = '#deeded';
+    })
+
+
+    </script>
+</body>
+</html>
