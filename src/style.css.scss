@@ -35,6 +35,12 @@ body {
 .wrapper {
   position: relative;
   width: 380px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   #toggleSlideshow {
     @include border-radius(4px);

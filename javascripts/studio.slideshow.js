@@ -4,7 +4,9 @@
 Slideshow Application
 ========================================================================================================
 
-Description:  Basic slideshow, no frameworks, fading with controls
+Description:  Basic slideshow, no frameworks, fading with controls. You can go click crazy on the next and previous, with the slideshow paused or playing and things should not (hmmm) break.
+
+Neat stuff: There is also a Rake file you can run in the Terminal to start the watch on the scss and coffeescript. I'm not sure what the last parts are, I should find out more. The Rake comes from a great post, by Nick Quaranto: http://quaran.to/blog/2013/01/09/use-jekyll-scss-coffeescript-without-plugins/
 
 Dependencies: Modernizr, for js detection
 
@@ -12,11 +14,19 @@ Version:      1.0
 Created:      2013-06-02
 Last Mod:     2013-06-04
 
-Notes: Originally devloped for crkarch.com's responsive non-Flash site version, then development continued on versions  for Le Bernardin, which used JS only, then refined for Kerrygold where I used Greensock to animate a sliding effect for the images.
+Notes: Originally devloped for crkarch.com's responsive non-Flash site version, then development continued on versions  for Le Bernardin, which used JS only, then refined for Kerrygold where I used Greensock to animate a sliding effect for the images. Earlier versions used clearInterval with setTimeouts, which was totally wrong. I think these are right now.
+
+Because I'm new to Coffeescript the top chunk has a Module Pattern done in Coffeescript as reference with Private and Public Methods and Properties. It's a classic: http://www.yuiblog.com/blog/2007/06/12/module-pattern/
+
+And a little modulus example b/c my mind always forgets how that works.
+
+This version also has lots of comments, but the nice thing about compiled Coffeescript is that fact it leaves em out.
 
 The goal for this version was to move to coffeescript and not use any frameworks. Eventually, the next version will move to jQuery for traversing and selecting and Greensock for animating.
 
 The addLoadEvent function is in here to use instead of jQuery's ready and to load multiple functions in a specific order ( I think that's what it's primary purpose is? Putting scripts at the bottom before the closing body does the DOM ready thing I think? )
+
+The next version is going to have thumbnails for navigating between the slides.
 
 ========================================================================================================
 */
@@ -225,12 +235,12 @@ this.STUDIO.makeSlideshow = (function() {
         console.log("slideshow paused");
         clearTimeout(slideshowTimeout);
         slideshowPaused = true;
-        return playback.innerHTML = "&#9787; Play";
+        return playback.innerHTML = "Slideshow is paused, &#9787; Play it.";
       } else {
         console.log("slideshow playing");
         runSlideshow();
         slideshowPaused = false;
-        return playback.innerHTML = "Pause &#9785;";
+        return playback.innerHTML = "Slideshow is playing, &#9785; Pause it.";
       }
     },
     nextSlide: function() {
