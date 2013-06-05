@@ -21,7 +21,7 @@ The studio.slideshow.js is loaded at the bottom of the page.
 Then when the page loads, you could use jQuery's ready but I'm just putting the script at the bottom of body before the closing tag, a call to the makeSlideshow.intiSlides method within the module is made (think that's how you refer to it... a module). That will take all the divs within the slideshow-wrapper and start everyting going.
 `STUDIO.makeSlideshow.initSlides("slideshow-wrapper");`
 
-The controls, which I'm playing around with .innerHTML to set in the Coffeescript/Javascript, handle the play/pause, next and previous like this:
+The controls, which I'm playing around with .innerHTML to set in the CoffeeScript/Javascript, handle the play/pause, next and previous like this:
 
     <div id="toggleSlideshow" onclick="STUDIO.makeSlideshow.pauseSlideshow()"> &#9787; Play / Pause &#9785;</div>
     <div id="nextSlide" onclick="STUDIO.makeSlideshow.nextSlide()">blah ✎ </div>
@@ -37,20 +37,20 @@ That's the Public API I think
 
 More Details
 ------------
-I left all of my comments and notes to myself in the .coffee file. I find myself going back to earlier versions of this slideshow and building on top or modifiying. My goal here was to develop a nice base file that would help me learn more about using [Coffeescript][2].
+I left all of my comments and notes to myself in the .coffee file. I find myself going back to earlier versions of this slideshow and building on top or modifiying. My goal here was to develop a nice base file that would help me learn more about using [CoffeeScript][2].
 
-[js2Coffee.org][3] was a big help for looking at my older version of plain Javascript and moving over to a Coffeescript version.
+[js2Coffee.org][3] was a big help for looking at my older version of plain Javascript and moving over to a CoffeeScript version.
 
-There's a Rake file that starts watching on the .coffee and the .scss files if you do `rake` from the directory in the Terminal. The rake file comes from a Nick Quaranto post on using [Jekyll, SCSS and Coffeescript without plugins][4].
-
-> I'm usually wrong the first few times and that's okay. &#9787;
-> Love to hear what you think.
+There's a Rake file that starts watching on the .coffee and the .scss files if you do `rake` from the directory in the Terminal. The rake file comes from a Nick Quaranto post on using [Jekyll, SCSS and CoffeeScript without plugins][4].
 
 Goals
 -----
 * This version: make it progressively enhanced or degrade nicely.
 * Next version: Add thumbnail images
 * Future version: Add jQuery and Greesock Animation Library
+
+> I'm usually wrong the first few times and that's okay. &#9787;
+> Love to hear what you think.
 
 [1]: http://workalicious.com/dev/slideshows/coffee-slideshow-basic/
 [2]: http://coffeescript.org/
