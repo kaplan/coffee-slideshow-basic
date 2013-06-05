@@ -22,6 +22,7 @@ Then when the page loads, you could use jQuery's ready but I'm just putting the 
 `STUDIO.makeSlideshow.initSlides("slideshow-wrapper");`
 
 The controls, which I'm playing around with .innerHTML to set in the Coffeescript/Javascript, handle the play/pause, next and previous like this:
+
     <div id="toggleSlideshow" onclick="STUDIO.makeSlideshow.pauseSlideshow()"> &#9787; Play / Pause &#9785;</div>
     <div id="nextSlide" onclick="STUDIO.makeSlideshow.nextSlide()">blah ✎ </div>
     <div id="prevSlide" onclick="STUDIO.makeSlideshow.prevSlide()"></div>
