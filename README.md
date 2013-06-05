@@ -1,7 +1,7 @@
 Basic Slideshow with Controls
 =============================
 
-Basic slideshow, no frameworks, fading with controls. You should be able to go click crazy on the next and previous buttons, with the slideshow paused or playing and things should not break.
+Basic slideshow, no libraries, fading with controls. You should be able to go click crazy on the next and previous buttons, with the slideshow paused or playing and things should not break.
 
 It's just a super basic slideshow where I'm trying to learn. Seems like a good starting point.
 
