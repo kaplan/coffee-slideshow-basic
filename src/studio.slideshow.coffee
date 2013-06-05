@@ -113,15 +113,13 @@ addLoadEvent = (func) ->
 # runSlideshow sets opacity calls fadeout
 # fadeOutSlide sets opacity, inteval calls itself, shuffles z-index
 # reorderLayerStack reorders the z-index stack looping over all slides after a slide fades down
-
-# setVisibilityForAdvance
-# fadeOutSlideAdvance
+# setVisibilityForAdvance need note
+# fadeOutSlideAdvance need note
 
 # =======
 # PUBLIC
 # initSlides
 # pauseSlideshow
-
 # nextSlide
 # prevSlide
 
